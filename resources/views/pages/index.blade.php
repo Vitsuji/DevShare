@@ -10,7 +10,7 @@
 @section('content')
    {{-- All of the goodies --}}
 
-   <h1>Can you see everyone's posts?</h1>
+   <h1>Landing Page<h1>
 @endsection
 
 @section('scripts')

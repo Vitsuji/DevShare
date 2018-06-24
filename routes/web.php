@@ -17,4 +17,4 @@
 
 
 Route::get('/', 'PagesController@getIndex')->name('main');
-Route::resource('posts','PostsController');
+Route::resource('projects','ProjectsController');

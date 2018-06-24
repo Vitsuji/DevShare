@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
+use App\Project;
+use Session;
+use DB;
 
-class PostsController extends Controller
+class ProjectsController extends Controller
 {
     // When Authentication is set
     //
@@ -20,7 +24,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $projects = Project::orderBy('id');
+        return view('projects.index')->withProjects($projects);
     }
 
     /**
@@ -30,7 +35,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.create');
     }
 
     /**
