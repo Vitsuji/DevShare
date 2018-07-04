@@ -46,7 +46,12 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
+            'description' => 'required',
+
+        ]);
     }
 
     /**
