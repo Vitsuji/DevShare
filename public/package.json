@@ -1,7 +1,7 @@
 {
-    "name": "DevShare",
+    "name": "Emineto",
     "version": "0.0.0",
-    "repository": "https://github.com/Vitsuji/DevShare",
+    "repository": "https://github.com/Vitsuji/Emineto",
     "dependencies": [
         "gulp-sass",
         "gulp",

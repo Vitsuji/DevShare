@@ -1,20 +1,29 @@
 nav {
     min-width: 7vw;
     max-width: 9vw;
-    height: 100vh;
+    height: calc(100vh - 2.2em);
     position: fixed;
     background: $grey;
     color: $white;
     font-weight: bolder;
     font-size: 1.1rem;
     text-align: center;
-    padding: 0.2em;
+    padding: 0.2em 0.5em 2.2em;
+
+    h1 a {
+        text-align: center;
+    }
 
     #nav__items {
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
+        justify-content: space-between;
+        height: 90%;
+
+        a {
+            display: table;
+        }
     }
 
     a {
@@ -25,5 +34,7 @@ nav {
         background: $grey;
         width: auto;
         padding: 0.2em;
+        display: table-cell;
+        vertical-align: middle;
     }
 }

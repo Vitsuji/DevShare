@@ -8,10 +8,13 @@
 @endsection
 
 @section('content')
-   {{-- All of the goodies --}}
-
-    <h1>Emineto<h1>
-    
+    {{-- All of the goodies --}}
+    <main id="splash__index">
+        <h1>Emineto</h1>
+        <h2>
+            <em>Project Yourself</em>
+        </h2>
+    </main>
 @endsection
 
 @section('scripts')
