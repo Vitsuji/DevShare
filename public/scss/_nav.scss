@@ -1,0 +1,29 @@
+nav {
+    min-width: 7vw;
+    max-width: 9vw;
+    height: 100vh;
+    position: fixed;
+    background: $grey;
+    color: $white;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.2em;
+
+    #nav__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    a {
+        background: none;
+    }
+
+    .nav__support-text {
+        background: $grey;
+        width: auto;
+        padding: 0.2em;
+    }
+}

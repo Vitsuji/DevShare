@@ -10,7 +10,8 @@
 @section('content')
    {{-- All of the goodies --}}
 
-   <h1>Landing Page<h1>
+    <h1>Emineto<h1>
+    
 @endsection
 
 @section('scripts')

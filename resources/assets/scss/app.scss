@@ -1,12 +1,11 @@
-
-// Fonts
+/* ==== FONTS ==== */
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
+/* ==== VARIABLES ==== */
 @import "variables";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+/* ==== SCSS FILE IMPORTS ==== */
+@import "general";
 
 .navbar-laravel {
   background-color: #fff;

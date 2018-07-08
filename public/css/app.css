@@ -1,0 +1,55 @@
+/* ==== FONTS ==== */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+/* ==== VARIABLES ==== */
+/* ==== SCSS FILE IMPORTS ==== */
+* {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  border-bottom: 1px solid gainsboro;
+  padding: 2px; }
+
+body {
+  font-family: sans-serif; }
+
+.container {
+  margin-left: 10vw; }
+
+a {
+  background: rgba(255, 207, 156, 0.25);
+  text-decoration: none;
+  margin: 0.3rem;
+  color: inherit; }
+  a:hover {
+    background: none;
+    text-decoration: underline;
+    color: #ffcf9c; }
+
+nav {
+  min-width: 7vw;
+  max-width: 9vw;
+  height: 100vh;
+  position: fixed;
+  background: #394053;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.2em; }
+  nav #nav__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%; }
+  nav a {
+    background: none; }
+  nav .nav__support-text {
+    background: #394053;
+    width: auto;
+    padding: 0.2em; }
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); }

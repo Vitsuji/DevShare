@@ -1,0 +1,14 @@
+/* ==== FONTS ==== */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+/* ==== VARIABLES ==== */
+@import "variables";
+
+/* ==== SCSS FILE IMPORTS ==== */
+@import "general";
+@import "nav";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

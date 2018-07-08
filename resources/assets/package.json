@@ -1,0 +1,10 @@
+{
+    "name": "DevShare",
+    "version": "0.0.0",
+    "repository": "https://github.com/Vitsuji/DevShare",
+    "dependencies": [
+        "gulp-sass",
+        "gulp",
+        "gulp-clean-css"
+    ]
+}
