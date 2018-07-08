@@ -14,11 +14,13 @@ class UserRelationship extends Migration
     public function up()
     {
         Schema::create('user_relationships', function (Blueprint $table) {
-            $table->integer('user_one_id')->unsigned();
-            $table->foreign('user_one_id')->references('id')->on('users');
+            $table->integer('follower_id')->unsigned();
+            $table->foreign('follower_id')->references('id')->on('users');
 
-            $table->integer('user_two_id')->unsigned();
-            $table->foreign('user_two_id')->references('id')->on('users');
+            $table->integer('followee_id')->unsigned();
+            $table->foreign('followee_id')->references('id')->on('users');
+        
+            $table->timestamps();
         });
     }
 
