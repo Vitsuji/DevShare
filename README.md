@@ -10,7 +10,7 @@ A new Logarithm
 6. Then run `php artisan db:seed` to seed the database
 
 ### Serving Emineto
-7. Run `php artisan serve` to launch the application on http://localhost:8000
+1. Run `php artisan serve` to launch the application on http://localhost:8000
 
 
 ## Frontend Installation
