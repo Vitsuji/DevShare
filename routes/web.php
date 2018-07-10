@@ -17,4 +17,6 @@
 
 
 Route::get('/', 'PagesController@getIndex')->name('main');
+Route::get('/1follow2', 'UserRelationshipController@userOneFollowsTwo');
+Route::get('/2getfollowers', 'UserRelationshipController@getUserTwoFollowers');
 Route::resource('projects','ProjectsController');
