@@ -7,8 +7,6 @@ class UserRelationshipTableSeeder extends Seeder {
 
     public function run()
     {
-        // Empty all previous records out
-        DB::table('user_relationships')->delete();
 
         // User with ID 1 is following user with ID 2
         UserRelationship::create(array(

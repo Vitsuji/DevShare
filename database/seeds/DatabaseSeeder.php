@@ -17,5 +17,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserRelationshipTableSeeder::class);
         $this->command->info('Follower table seeded!');
+
+        $this->call(ProjectsTableSeeder::class);
+        $this->command->info('Projects table seeded!');
     }
 }

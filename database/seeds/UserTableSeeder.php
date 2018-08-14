@@ -8,6 +8,10 @@ class UserTableSeeder extends Seeder {
     public function run()
     {
         // Empty all previous records out
+        DB::table('projects')->delete();
+
+        DB::table('user_relationships')->delete();
+
         DB::table('users')->delete();
 
         User::create(array(
