@@ -23,7 +23,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public static function index()
     {
         $projects = Project::orderBy('id')->paginate(10);
         return view('home')->withProjects($projects);
