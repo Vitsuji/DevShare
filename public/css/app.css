@@ -35,7 +35,7 @@ nav {
   max-width: 9vw;
   height: calc(100vh - 2.2em);
   position: fixed;
-  background: #210227;
+  background: #56709b;
   color: rgba(255, 255, 255, 0.8);
   font-weight: bolder;
   font-size: 1.1rem;
@@ -47,22 +47,25 @@ nav {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 90%; }
     nav #nav__items a {
-      display: table; }
+      display: block;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid white; }
   nav a {
     background: none; }
   nav i {
-    font-size: 2.6rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.6rem;
     margin-right: 0.2em; }
   nav .nav__support-text {
-    background: #210227;
+    background: #56709b;
     width: auto;
     padding: 0.2em;
-    display: table-cell;
     vertical-align: middle;
-    text-align: left; }
+    text-align: center; }
 
 .navbar-laravel {
   background-color: #fff;
