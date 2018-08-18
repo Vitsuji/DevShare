@@ -14,6 +14,8 @@
         <h2>
             <em>Project Yourself</em>
         </h2>
+
+        <p></p>
     </main>
 @endsection
 

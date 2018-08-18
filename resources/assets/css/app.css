@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 /* ==== VARIABLES ==== */
 /* ==== SCSS FILE IMPORTS ==== */
-h1, h2, h3, h4, h5, h6 {
+1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   border-bottom: 1px solid gainsboro;
   padding: 2px; }
+
+body {
+  font-family: serif, sans-serif; }
 
 .navbar-laravel {
   background-color: #fff;
