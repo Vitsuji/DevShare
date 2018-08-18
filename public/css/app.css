@@ -35,7 +35,7 @@ nav {
   max-width: 9vw;
   height: calc(100vh - 2.2em);
   position: fixed;
-  background: #56709b;
+  background: #5a253e;
   color: rgba(255, 255, 255, 0.8);
   font-weight: bolder;
   font-size: 1.1rem;
@@ -61,7 +61,7 @@ nav {
     font-size: 1.6rem;
     margin-right: 0.2em; }
   nav .nav__support-text {
-    background: #56709b;
+    background: #5a253e;
     width: auto;
     padding: 0.2em;
     vertical-align: middle;
