@@ -22,5 +22,5 @@ Route::get('/2getfollowers', 'UserRelationshipController@getUserTwoFollowers');
 Route::resource('projects','ProjectsController');
 
 Auth::routes();
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
