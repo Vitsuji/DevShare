@@ -8,14 +8,17 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
-  border-bottom: 1px solid gainsboro;
   padding: 2px; }
+
+h1 {
+  border-bottom: 1px solid gainsboro; }
 
 body {
   font-family: sans-serif; }
 
 .container {
-  margin-left: 10vw; }
+  padding-top: 2rem;
+  margin-left: 20vw; }
 
 a {
   background: rgba(255, 207, 156, 0.25);
@@ -32,7 +35,7 @@ nav {
   max-width: 9vw;
   height: calc(100vh - 2.2em);
   position: fixed;
-  background: #394053;
+  background: #210227;
   color: rgba(255, 255, 255, 0.8);
   font-weight: bolder;
   font-size: 1.1rem;
@@ -50,12 +53,16 @@ nav {
       display: table; }
   nav a {
     background: none; }
+  nav i {
+    font-size: 2.6rem;
+    margin-right: 0.2em; }
   nav .nav__support-text {
-    background: #394053;
+    background: #210227;
     width: auto;
     padding: 0.2em;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    text-align: left; }
 
 .navbar-laravel {
   background-color: #fff;

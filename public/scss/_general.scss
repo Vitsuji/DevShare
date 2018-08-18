@@ -5,8 +5,11 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $display-font;
-    border-bottom: 1px solid gainsboro;
     padding: 2px;
+}
+
+h1 {
+    border-bottom: 1px solid gainsboro;
 }
 
 body {
@@ -14,7 +17,8 @@ body {
 }
 
 .container {
-    margin-left: 10vw;
+    padding-top: 2rem;
+    margin-left: 20vw;
 }
 
 a {
