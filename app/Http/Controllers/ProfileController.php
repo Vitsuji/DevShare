@@ -18,10 +18,10 @@ class ProfileController extends Controller
     }
 
 
-    public function index($id)
+    public function index($name)
     {
-        $profile = User::find($id);
-        return view('profile.index')->withProfile($profile);
+        $profile = User::where('name', $name)->get();
+        return view('profile.index')->withProfile($profile[0]);
     }
 
 }
