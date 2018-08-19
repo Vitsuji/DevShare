@@ -17,12 +17,21 @@
         {{ Form::label('title','Title') }}
         {{ Form::text('title', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
 
-        {{ Form::label('slug', 'Slug') }}
-        {{ Form::text('slug', null, ['class' => 'whatever_classs', 'min-length' => '5', 'maxlength' => '255']) }}
-
         {{ Form::label('description', 'Description') }}
         {{ Form::textarea('description', null, array('class' => 'whatever_casss')) }}
-         
+
+        {{ Form::label('collaborators','Collaborators') }}
+        {{ Form::text('collaborators', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('tags','Tags') }}
+        {{ Form::text('tags', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('github_repo','Gituhb Repository') }}
+        {{ Form::text('github_repo', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('prototype','Prototype') }}
+        {{ Form::text('prototype', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
         {{ Form::submit('Create', ['class' => 'whatever_class']) }}
     {{ Form::close() }}
 

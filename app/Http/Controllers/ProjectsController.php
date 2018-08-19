@@ -48,10 +48,27 @@ class ProjectsController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
-            'slug' => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
             'description' => 'required',
-
+            'tags' => 'required|max:255',
+            'github_repo' => 'max:500',
+            'prototype' => 'max:500',
         ]);
+
+        $user = Auth::user();
+
+        $project = new Project;
+        
+        $project->user_id = $user->id;
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->slug = str_slug($request->title, '-');
+        $project->collaborators = $request->collaborators;
+        $project->tags = $request->tags;
+        $project->github_repo = $request->github_repo;
+        $project->prototype = $request->prototype;
+
+        $project->save();
+        return redirect()->route('projects.index');
     }
 
     /**

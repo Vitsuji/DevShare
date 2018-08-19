@@ -14,7 +14,6 @@
     <img src="{{ asset('img/uploads/profile/'.$profile->profile_img) }}"/>
     {{-- <p>{{ $profile->project() }}</p> --}}
     @foreach ($profile->project as $project)
-        <p>{{ $project->title }}</p>
         <p>{{ $project->description }}</p>
     @endforeach
 @endsection

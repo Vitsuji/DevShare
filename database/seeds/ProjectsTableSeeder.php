@@ -10,6 +10,8 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '1',
+            'title' => 'Vitsuji Gang',
+            'slug' => 'vitsuji-gang',
             'user_id'  => '1',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
@@ -20,6 +22,8 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '2',
+            'title' => 'Vitsuji Gang',
+            'slug' => 'vitsuji-gang2',
             'user_id'  => '2',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
@@ -30,6 +34,8 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '3',
+            'title' => 'Vitsuji Gang',
+            'slug' => 'vitsuji-gang3',
             'user_id'  => '2',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
@@ -40,6 +46,8 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '4',
+            'title' => 'Vitsuji Gang',
+            'slug' => 'vitsuji-gang4',
             'user_id'  => '4',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
