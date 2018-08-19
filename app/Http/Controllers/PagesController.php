@@ -10,7 +10,7 @@ class PagesController extends Controller
     public function getIndex()
     {
         if (Auth::check()) {
-            return redirect()->action('HomeController@index');
+            return redirect()->action('ProjectsController@index');
         } else {
             return view('pages.index');
         }

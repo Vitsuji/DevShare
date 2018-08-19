@@ -12,10 +12,10 @@ class ProjectsController extends Controller
 {
     // When Authentication is set
     //
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index']]);
+    }
 
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects = Project::orderBy('id');
+        $projects = Project::orderBy('id')->paginate(10);
         return view('projects.index')->withProjects($projects);
     }
 

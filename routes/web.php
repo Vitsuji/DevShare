@@ -23,4 +23,6 @@ Route::resource('projects','ProjectsController');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('user/{id}', ['as' => 'user.index', 'uses' => 'ProfileController@index'])->where('id', '^\d+$');
+
