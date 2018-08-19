@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder {
             'id' => '1',
             'name'  => 'name1',
             'email'     => 'foo@bar.com',
+            'profile_img'     => 'default_avatar.png',
             'password'  => 'password',
             'remember_token' => 'UserOne'
         ));
@@ -26,6 +27,7 @@ class UserTableSeeder extends Seeder {
             'id' => '2',
             'name'  => 'name2',
             'email'     => 'foo2@bar.com',
+            'profile_img'     => 'default_avatar.png',
             'password'  => 'password',
             'remember_token' => 'UseTwo'
         ));
@@ -34,6 +36,7 @@ class UserTableSeeder extends Seeder {
             'id' => '3',
             'name'  => 'name3',
             'email'     => 'foo3@bar.com',
+            'profile_img'     => 'default_avatar.png',
             'password'  => 'password',
             'remember_token' => 'Usehree'
         ));
@@ -42,6 +45,7 @@ class UserTableSeeder extends Seeder {
             'id' => '4',
             'name'  => 'name4',
             'email'     => 'foo4@bar.com',
+            'profile_img'     => 'default_avatar.png',
             'password'  => 'password',
             'remember_token' => 'Useour'
         ));

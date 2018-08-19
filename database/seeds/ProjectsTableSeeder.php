@@ -10,7 +10,7 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '1',
-            'author_id'  => '1',
+            'user_id'  => '1',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
             'tags' => 'Spicy',
@@ -20,7 +20,7 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '2',
-            'author_id'  => '2',
+            'user_id'  => '2',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
             'tags' => 'Spicy',
@@ -30,7 +30,7 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '3',
-            'author_id'  => '2',
+            'user_id'  => '2',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
             'tags' => 'Spicy',
@@ -40,7 +40,7 @@ class ProjectsTableSeeder extends Seeder {
 
         Project::create(array(
             'id' => '4',
-            'author_id'  => '4',
+            'user_id'  => '4',
             'description'     => 'fblah blah blah blah, blah blah blah',
             'collaborators'  => '3',
             'tags' => 'Spicy',

@@ -11,6 +11,11 @@
     <h2>Your Profile, {{ $profile->name }}</h2>
 
     <p>{{ $profile->email }}</p>
+    <img src="{{ asset('img/uploads/profile/'.$profile->profile_img) }}"/>
+    {{-- <p>{{ $profile->project() }}</p> --}}
+    @foreach ($profile->project as $project)
+        <p>{{ $project->description }}</p>
+    @endforeach
 @endsection
 
 @section('scripts')

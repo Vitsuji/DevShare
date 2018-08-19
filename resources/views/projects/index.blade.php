@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', '?')
+@section('title', 'Projects')
 
 @section('stylesheets')
     {{-- Any scripts to include in this page. Use asset function --}}
