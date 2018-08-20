@@ -20,7 +20,7 @@ nav {
         flex-direction: column;
         height: 90%;
     }
-    
+
     #nav__items {
         margin-top: 2rem;
         display: flex;
@@ -31,12 +31,15 @@ nav {
             padding-bottom: 2rem;
             margin-bottom: 2rem;
             border-bottom: 1px solid white;
-
         }
     }
 
     a {
         background: none;
+
+        &:hover {
+            color: $secondary-colour;
+        }
     }
 
     i {

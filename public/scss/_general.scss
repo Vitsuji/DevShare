@@ -6,10 +6,11 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: $display-font;
     padding: 2px;
+    margin-bottom: 1.1rem;
 }
 
 h1 {
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid $gainsboro;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
 }
 
 a {
-    background: rgba($secondary-colour, 0.25);
     text-decoration: none;
     margin: 0.3rem;
     color: inherit;
@@ -30,6 +30,32 @@ a {
     &:hover {
         background: none;
         text-decoration: underline;
-        color: $secondary-colour;
+        color: $dark-compliment;
+    }
+}
+
+input {
+    outline: 0;
+    padding: 0.5rem;
+    border: 2px solid $gainsboro;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    margin: 0.2rem 0 0.2rem;
+
+    &:focus {
+        border: 2px solid $primary-colour;
+    }
+}
+
+button {
+    background: white;
+    border-radius: 3px;
+    border: 2px solid $gainsboro;
+    padding: 0.5rem;
+
+    &:hover {
+        background: $secondary-colour;
+        color: white;
+        cursor: pointer;
     }
 }

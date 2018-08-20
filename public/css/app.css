@@ -8,10 +8,11 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
-  padding: 2px; }
+  padding: 2px;
+  margin-bottom: 1.1rem; }
 
 h1 {
-  border-bottom: 1px solid gainsboro; }
+  border-bottom: 1px solid #bed8d4; }
 
 body {
   font-family: "Rubik", sans-serif; }
@@ -21,14 +22,33 @@ body {
   margin-left: 20vw; }
 
 a {
-  background: rgba(255, 207, 156, 0.25);
   text-decoration: none;
   margin: 0.3rem;
   color: inherit; }
   a:hover {
     background: none;
     text-decoration: underline;
-    color: #ffcf9c; }
+    color: #0582ca; }
+
+input {
+  outline: 0;
+  padding: 0.5rem;
+  border: 2px solid #bed8d4;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  margin: 0.2rem 0 0.2rem; }
+  input:focus {
+    border: 2px solid #a4d4b4; }
+
+button {
+  background: white;
+  border-radius: 3px;
+  border: 2px solid #bed8d4;
+  padding: 0.5rem; }
+  button:hover {
+    background: #ffcf9c;
+    color: white;
+    cursor: pointer; }
 
 nav {
   min-width: 8rem;
@@ -59,6 +79,8 @@ nav {
       border-bottom: 1px solid white; }
   nav a {
     background: none; }
+    nav a:hover {
+      color: #ffcf9c; }
   nav i {
     text-align: center;
     width: 100%;
