@@ -1,5 +1,5 @@
 nav {
-    min-width: 7vw;
+    min-width: 8rem;
     max-width: 9vw;
     height: calc(100vh - 2.2em);
     position: fixed;
@@ -14,11 +14,17 @@ nav {
         text-align: center;
     }
 
+    #nav__sections {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 90%;
+    }
+    
     #nav__items {
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        height: 90%;
 
         a {
             display: block;
