@@ -160,6 +160,10 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+        File::delete('img/uploads/event/'.$project->cover_img);
+        $project->delete();
+        
+        return redirect()->route('projects.index');
     }
 }
