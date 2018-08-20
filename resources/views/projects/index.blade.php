@@ -19,7 +19,9 @@
     <h1>Welcome {{ explode(" ", Auth::user()->name)[0] }}</h1>
   @endif
   @foreach ($projects as $project)
+    <h2>{{ $project->title }}</h2>
     <h2>{{ $project->description }}</h2>
+    <img src="{{ asset('img/uploads/project/'.$project->cover_img) }}"/>
     {{--  Call the user method and then selelct what you need from the user table e.g name, id, profile pic --}}
     <h4>{{ $project->user->name}}</h4>
   @endforeach

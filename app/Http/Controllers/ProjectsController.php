@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Project;
 use Session;
 use DB;
+use File;
+use DateTime;
 
 class ProjectsController extends Controller
 {
@@ -48,11 +50,18 @@ class ProjectsController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
+            'cover_img' => 'required|max:255',
             'description' => 'required',
             'tags' => 'required|max:255',
             'github_repo' => 'max:500',
             'prototype' => 'max:500',
         ]);
+
+        $file = $request->cover_img;
+        $now = new DateTime();
+        $ido = '0';
+        $file_name = $ido.'-'.$now->format('d-N-H-s').$request->cover_img->getClientOriginalName();
+        $file->move('img/uploads/project/', $file_name);
 
         $user = Auth::user();
 
@@ -60,6 +69,7 @@ class ProjectsController extends Controller
         
         $project->user_id = $user->id;
         $project->title = $request->title;
+        $project->cover_img = $file_name;
         $project->description = $request->description;
         $project->slug = str_slug($request->title, '-');
         $project->collaborators = $request->collaborators;
