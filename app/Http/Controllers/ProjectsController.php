@@ -101,7 +101,8 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        return view('projects.edit');
+        $project = Project::find($id);
+        return view('projects.edit')->withProject($project);
     }
 
     /**
@@ -113,7 +114,42 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'tags' => 'required|max:255',
+            'github_repo' => 'required|max:500',
+            'prototype' => 'required|max:500',
+            'collaborators' => 'required|max:500',
+        ]);
+
+        $project = Project::find($id);
+        $user = Auth::user();
+
+        if($request->cover_img) {
+
+            $file = $request->cover_img;
+            $now = new DateTime();
+            $ido = '0';
+            $file_name = $ido.'-'.$now->format('d-N-H-s').$request->cover_img->getClientOriginalName();
+            $file->move('img/uploads/project/', $file_name);
+
+            $project->cover_img = $file_name;
+        }
+        
+        $project->user_id = $user->id;
+        $project->title = $request->title;
+        
+        $project->description = $request->description;
+        $project->collaborators = $request->collaborators;
+        $project->tags = $request->tags;
+        $project->github_repo = $request->github_repo;
+        $project->prototype = $request->prototype;
+
+        $project->save();
+        return redirect()->route('projects.show', $project->id);
+
+
     }
 
     /**

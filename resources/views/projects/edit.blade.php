@@ -12,7 +12,7 @@
 
    <h1>Edit</h1>
 
-    {{ Form::open(['route' => 'projects.update', 'class' => 'whatever_class', 'enctype' => 'multipart/form-data', 'method' => 'post', 'files' => true]) }}
+    {{ Form::model($project, ['route' => ['projects.update', $project->id], 'class' => 'whatever_class', 'enctype' => 'multipart/form-data', 'method' => 'PUT']) }}
         {{ Form::token() }}
         {{ Form::label('title','Title') }}
         {{ Form::text('title', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
@@ -35,7 +35,7 @@
         {{ Form::label('prototype','Prototype') }}
         {{ Form::text('prototype', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
 
-        {{ Form::submit('Create', ['class' => 'whatever_class']) }}
+        {{ Form::submit('Edit', ['class' => 'whatever_class']) }}
     {{ Form::close() }}
 
 @endsection
