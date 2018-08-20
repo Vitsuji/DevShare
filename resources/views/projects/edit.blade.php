@@ -11,6 +11,33 @@
    {{-- All of the goodies --}}
 
    <h1>Edit</h1>
+
+    {{ Form::open(['route' => 'projects.update', 'class' => 'whatever_class', 'enctype' => 'multipart/form-data', 'method' => 'post', 'files' => true]) }}
+        {{ Form::token() }}
+        {{ Form::label('title','Title') }}
+        {{ Form::text('title', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('description', 'Description') }}
+        {{ Form::textarea('description', null, array('class' => 'whatever_casss')) }}
+
+        {{ Form::label('cover_img', 'Cover Image') }}
+        {{ Form::file('cover_img', array('class' => 'whatever_class')) }}
+
+        {{ Form::label('collaborators','Collaborators') }}
+        {{ Form::text('collaborators', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('tags','Tags') }}
+        {{ Form::text('tags', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('github_repo','Gituhb Repository') }}
+        {{ Form::text('github_repo', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::label('prototype','Prototype') }}
+        {{ Form::text('prototype', null, ['class' => 'whatever_class', 'max-length' => '255']) }}
+
+        {{ Form::submit('Create', ['class' => 'whatever_class']) }}
+    {{ Form::close() }}
+
 @endsection
 
 @section('scripts')
