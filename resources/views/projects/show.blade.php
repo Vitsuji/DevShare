@@ -10,7 +10,14 @@
 @section('content')
    {{-- All of the goodies --}}
 
-   <h1>Focus on a single one of your posts</h1>
+   <h1>{{ $project->title }}</h1>
+   <h2>{{ $project->description }}</h2>
+   <h2>{{ $project->user->name }}</h2>
+   <img src="{{ asset('img/uploads/project/'.$project->cover_img) }}"/>
+   <h2>{{ $project->github_repo }}</h2>
+   <h2>{{ $project->prototype }}</h2>
+   <h2>{{ $project->collaborators }}</h2>
+
 @endsection
 
 @section('scripts')
