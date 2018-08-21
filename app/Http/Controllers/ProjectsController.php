@@ -90,7 +90,12 @@ class ProjectsController extends Controller
     public function show($id)
     {
         $project = Project::find($id);
-        return view('projects.show')->withProject($project);
+        if($project) {
+            return view('projects.show')->withProject($project);
+        }else {
+            return view('errors.404');
+        }
+        
     }
 
     /**
@@ -101,8 +106,17 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
+        $user_id = Auth::user()->id;
         $project = Project::find($id);
-        return view('projects.edit')->withProject($project);
+        if($project) {
+            if($user_id != $project->user->id) {
+                return view('errors.denied');
+            }else {
+                return view('projects.edit')->withProject($project);
+            }
+        }else {
+            return view('errors.404');
+        }
     }
 
     /**
@@ -160,10 +174,17 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
+        $user_id = Auth::user()->id;
         $project = Project::find($id);
-        File::delete('img/uploads/event/'.$project->cover_img);
-        $project->delete();
-        
-        return redirect()->route('projects.index');
+
+        if($user_id == $project->user->id) {
+            File::delete('img/uploads/event/'.$project->cover_img);
+            $project->delete();
+            
+            return redirect()->route('projects.index');
+        }else {
+            return view('errors.denied');
+        }
+
     }
 }

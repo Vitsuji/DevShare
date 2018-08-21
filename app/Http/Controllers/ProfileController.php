@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -24,4 +25,13 @@ class ProfileController extends Controller
         return view('profile.index')->withProfile($profile);
     }
 
+    public function edit($id) {
+        $profile = Auth::user();
+        
+        if($profile->id != $id) {
+            return view('errors.denied');
+        }else {
+            return view('profile.edit')->withProfile($profile);
+        }
+    }
 }

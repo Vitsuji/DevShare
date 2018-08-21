@@ -25,4 +25,6 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('user/{id}', ['as' => 'user.index', 'uses' => 'ProfileController@index'])->where('id', '^\d$');
+Route::get('user/{id}/edit', ['as' => 'user.edit', 'uses' => 'ProfileController@edit'])->where('id', '^\d$');
+Route::put('user/{id}', ['as' => 'user.update', 'uses' => 'ProfileController@update'])->where('id', '^\d+$');
 
