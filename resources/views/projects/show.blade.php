@@ -14,6 +14,8 @@
     {!! Form::open(['route' => ['projects.destroy', $project->id], 'method' => 'DELETE']) !!}
         {!! Form::submit('Delete', ['class' => 'whatever_class'])  !!}
     {!! Form::close() !!}
+
+    <div><a href="{{ route('projects.edit', ['id' => $project->id]) }}">EDIT</a></div>
    @endif
 
    <h1>{{ $project->title }}</h1>
