@@ -10,7 +10,7 @@
         </section>
         @if(auth()->check())
             <section id="nav__user">
-                <a href="{{ url('/home/') }}">{{ Auth::user()->name }}</a>
+                <a href="{{ route('user.index', ['id' => Auth::user()->id]) }}">{{ Auth::user()->name }}</a>
                 <a href="{{ url('/logout/') }}">Logout</a>
             </section>
         @else
