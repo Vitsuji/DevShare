@@ -21,10 +21,10 @@ class AddProjects extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('description');
-            $table->string('collaborators');
+            $table->string('collaborators')->nullable();;
             $table->string('tags');
-            $table->string('github_repo');
-            $table->string('prototype');
+            $table->string('github_repo')->nullable();;
+            $table->string('prototype')->nullable();;
             $table->timestamps();
         });
     }
