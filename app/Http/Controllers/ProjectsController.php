@@ -78,6 +78,8 @@ class ProjectsController extends Controller
         $project->prototype = $request->prototype;
 
         $project->save();
+
+        Session::flash('success', 'Project has been added successfully.');
         return redirect()->route('projects.index');
     }
 
@@ -161,6 +163,7 @@ class ProjectsController extends Controller
         $project->prototype = $request->prototype;
 
         $project->save();
+        Session::flash('success', 'Project has been updated.');
         return redirect()->route('projects.show', $project->id);
 
 
@@ -180,7 +183,7 @@ class ProjectsController extends Controller
         if($user_id == $project->user->id) {
             File::delete('img/uploads/event/'.$project->cover_img);
             $project->delete();
-            
+            Session::flash('success', 'Project has been deleted.');
             return redirect()->route('projects.index');
         }else {
             return view('errors.denied');

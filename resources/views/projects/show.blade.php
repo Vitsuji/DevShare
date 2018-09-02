@@ -10,11 +10,12 @@
 @section('content')
    {{-- All of the goodies --}}
 
-   @if(auth()->check())
+   @if(AUth::user()->id == $project->user->id)
     {!! Form::open(['route' => ['projects.destroy', $project->id], 'method' => 'DELETE']) !!}
         {!! Form::submit('Delete', ['class' => 'whatever_class'])  !!}
     {!! Form::close() !!}
    @endif
+
    <h1>{{ $project->title }}</h1>
    <h2>{{ $project->description }}</h2>
    <h2>{{ $project->user->name }}</h2>
